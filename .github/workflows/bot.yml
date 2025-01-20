@@ -1,0 +1,30 @@
+name: Run Twitch Bot
+
+on:
+  push:
+    branches:
+      - main  # Se ejecutará al hacer un push al branch principal.
+  workflow_dispatch: # Permite iniciar manualmente el bot desde GitHub.
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16  # Asegúrate de que sea compatible con tu código.
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run bot
+        run: node index.js
+        env:  # Aquí defines las variables de entorno necesarias.
+          TWITCH_TOKEN: ${{ secrets.TWITCH_TOKEN }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
