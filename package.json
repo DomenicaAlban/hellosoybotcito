@@ -1,0 +1,30 @@
+{
+  "name": "BloxiB0T",
+  "version": "1.0.0",
+  "description": "A simple Twitch chatbot that uses tmi.js to interact with Twitch chat!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bloxiphy",
+  "license": "ISC",
+  "keywords": [
+    "twitch",
+    "chatbot",
+    "chat",
+    "bot",
+    "tmi.js",
+    "bloxiphy",
+    "node.js",
+    "javascript"
+  ],
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "tmi.js": "^1.8.5",
+    "twitch-api": "^0.5.0"
+  },
+  "repository": {
+    "url": "https://github.com/Bloxiphy/Simple-Twitch-Chatbot"
+  }
+}
